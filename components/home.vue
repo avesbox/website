@@ -47,7 +47,7 @@ onMounted(() => {
 	<div id="hero" class="container flex w-full h-dvh gap-8 flex-col items-center justify-center">
         <div class="relative w-72 h-72">
             <div class="bg-gradient-to-r from-rose-500 to-orange-950 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 blur-3xl z-[-1]"></div>
-            <img src="/logo.png" alt="Serinus Logo" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72" />
+            <img src="/logo.png" alt="Avesbox Logo" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72" />
 			<a href="https://serinus.app">
 				<img src="/birds/serinus-logo.png" id="serinus" alt="Serinus Image" class="absolute top-20 left-24 w-36 hover:scale-125 transition-all">
 			</a>
@@ -64,8 +64,6 @@ onMounted(() => {
                 <a href="https://discord.gg/zydgnJ3ksJ" class="bg-gradient-to-r from-rose-500 to-rose-600 px-8 py-4 rounded-full flex items-center gap-4"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
             </div>
         </div>
-        <a href="#birds" id="learn-more" class="text-sm">Learn more</a>
-
   	</div>
 </template>
 

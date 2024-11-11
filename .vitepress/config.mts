@@ -4,11 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Avesbox",
   description: "A Dart 🎯 ecosystem of amazing birds and libraries.",
-  markdown: {
-    image: {
-      lazyLoading: true
-    }
-  },
   head: [
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/logo-32x32.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/logo-16x16.png"}],
@@ -28,17 +23,7 @@ export default defineConfig({
     
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Blog', link: '/blog' },
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+      { text: 'Blog', link: '/blog/' },
     ],
 
     socialLinks: [
