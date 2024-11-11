@@ -10,19 +10,19 @@ head:
 
     - - meta
       - name: 'description'
-        content: Why Serinus has been created and what are the goals of the project
+        content: What is Avesbox? Why has it been created?
 
     - - meta
       - property: 'og:description'
-        content: Why Serinus has been created and what are the goals of the project
+        content: What is Avesbox? Why has it been created?
 
     - - meta
       - property: 'og:image'
-        content: https://serinus.app/blog/the_goal_of_serinus/the_goal_of_serinus.webp
+        content: https://avesbox.com/blog/unleash_the_power/unleash_the_power.webp
 
     - - meta
       - property: 'twitter:image'
-        content: https://serinus.app/blog/the_goal_of_serinus/the_goal_of_serinus.webp
+        content: https://avesbox.app/blog/unleash_the_power/unleash_the_power.webp
 ---
 <script setup>
 	import BlogPage from '../components/blog_page.vue'
@@ -33,7 +33,7 @@ head:
 	src="/blog/unleash_the_power/unleash_the_power.webp"
 	alt="Unleash the power of Dart on the backend"
 	author="Francesco Vallone"
-	date="4 Nov 2024"
+	date="11 Nov 2024"
 	shadow
 >
 
@@ -53,7 +53,11 @@ Right now the project is composed of the following packages:
 
 ## Why has Avesbox been created?
 
-Avesbox has been created when I started to understand the lack of libraries and tools to build web applications, communicate with services and more in Dart.
+Avesbox has been created when I started to understand two big problems in the Dart ecosystem on the backend:
+
+- The lack of libraries and tools to build web applications and APIs.
+
+- The lack of a big community around the Dart ecosystem on the backend.
 
 So I decided to create a set of libraries and tools to fill this gap and to demonstrate that Dart is a powerful language that can be used also on the backend and not only for Flutter.
 
@@ -71,7 +75,7 @@ Although Avesbox has been created by one person and it is still in its early sta
 
 ## Social
 
-If you want to stay updated on the project, you can follow Avesbox on [X](https://twitter.com/avesboxx) and [GitHub](https://github.com/avesbox).
+If you want to stay updated on the project, you can follow Avesbox on [X](https://x.com/avesboxx) and [GitHub](https://github.com/avesbox).
 
 Stay tuned for more updates and releases! 🐤
 
