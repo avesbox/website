@@ -1,0 +1,21 @@
+# Files and directories created by pub.
+.dart_tool/
+.packages
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Conventional directory for build output.
+build/
+
+**/**/coverage.json
+**/**/*_test*.json
+**/**/lcov.info
+**/**/*.code-workspace
+**/old/**
+
+**/node_modules/
+**/.vitepress/cache
