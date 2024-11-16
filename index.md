@@ -1,5 +1,5 @@
 ---
-title: Avesbox - Modular Framework for Dart
+title: Avesbox - A Dart ecosystem
 titleTemplate: false
 layout: home
 ---
