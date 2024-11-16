@@ -4,6 +4,7 @@ import { onMounted } from 'vue';
 onMounted(() => {
 	const serinusLogo = document.getElementById('serinus');
 	const acanthisLogo = document.getElementById('acanthis');
+	const frontierLogo = document.getElementById('frontier');
 	const hero = document.getElementById('hero');
 	const feathers = [];
 	serinusLogo.addEventListener('mouseenter', () => {
@@ -40,6 +41,23 @@ onMounted(() => {
 			feathers.splice(feathers.indexOf(feather), 1);
 		})
 	})
+	frontierLogo.addEventListener('mouseenter', () => {
+		if(feathers.length > 20) return;
+		const feather = document.createElement('div');
+		const featherImg = document.createElement('img');
+		featherImg.src = '/birds/frontier-feather.png';
+		feather.classList.add('absolute', 'w-8', 'transition-all', 'feather');
+		featherImg.classList.add('feather-side', 'transition-all');
+		feather.appendChild(featherImg);
+		feather.style.top = '0px';
+		feather.style.left = Math.random() * hero.offsetWidth + 'px';
+		hero.appendChild(feather);
+		feathers.push(feather);
+		feather.addEventListener('animationend', () => {
+			feather.remove();
+			feathers.splice(feathers.indexOf(feather), 1);
+		})
+	})
 });
 </script>
 
@@ -48,11 +66,14 @@ onMounted(() => {
         <div class="relative w-72 h-72">
             <div class="bg-gradient-to-r from-rose-500 to-orange-950 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 blur-3xl z-[-1]"></div>
             <img src="/logo.png" alt="Avesbox Logo" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72" />
-			<a href="https://serinus.app">
+			<a href="https://serinus.app" target="_blank">
 				<img src="/birds/serinus-logo.png" id="serinus" alt="Serinus Image" class="absolute top-20 left-24 w-36 hover:scale-125 transition-all">
 			</a>
-			<a href="https://acanthis.serinus.app">
+			<a href="https://acanthis.serinus.app" target="_blank">
 				<img src="/birds/acanthis-logo.png" id="acanthis" alt="Acanthis Image" class="absolute -top-8 -right-16 w-36 hover:scale-125 transition-all">
+			</a>
+			<a href="https://pub.dev/packages/frontier" target="_blank">
+				<img src="/birds/frontier-logo.png" id="frontier" alt="Frontier Image" class="absolute -top-16 right-16 w-36 hover:scale-125 transition-all">
 			</a>
 		</div>
         <div class="flex flex-col items-center">
