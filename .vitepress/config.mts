@@ -9,7 +9,7 @@ export default defineConfig({
     ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/logo-16x16.png"}],
   ],
   lastUpdated: true,
-  appearance: 'force-dark',
+  appearance: false,
   themeConfig: {
     footer: {
       copyright: 'Copyright © 2024 Avesbox',

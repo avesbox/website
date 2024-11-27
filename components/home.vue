@@ -62,9 +62,15 @@ onMounted(() => {
 </script>
 
 <template>
-	<div id="hero" class="container flex w-full h-dvh gap-8 flex-col items-center justify-center">
+	<div id="hero" class="container flex w-full h-dvh gap-8 flex items-center justify-between">
+		<div class="flex flex-col">
+            <div class="text-6xl lg:text-8xl">Avesbox</div>
+            <div class="my-4 lg:my-8 text-xl lg:text-2xl text-center">
+                Unleash the power of Flutter and Dart with Avesbox
+            </div>
+            <a href="https://discord.gg/zydgnJ3ksJ" class="max-w-fit bg-gradient-to-r from-rose-500 to-rose-600 px-8 py-4 rounded-full flex items-center gap-4"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
+        </div>
         <div class="relative w-72 h-72">
-            <div class="bg-gradient-to-r from-rose-500 to-orange-950 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 blur-3xl z-[-1]"></div>
             <img src="/logo.png" alt="Avesbox Logo" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72" />
 			<a href="https://serinus.app" target="_blank">
 				<img src="/birds/serinus-logo.png" id="serinus" alt="Serinus Image" class="absolute top-20 left-24 w-36 hover:scale-125 transition-all">
@@ -76,15 +82,7 @@ onMounted(() => {
 				<img src="/birds/frontier-logo.png" id="frontier" alt="Frontier Image" class="absolute -top-16 right-16 w-36 hover:scale-125 transition-all">
 			</a>
 		</div>
-        <div class="flex flex-col items-center">
-            <div class="text-6xl lg:text-8xl font-bold">Avesbox</div>
-            <div class="my-4 lg:my-8 text-xl lg:text-2xl text-gray-300 text-center">
-                Unleashing the power of <b class="text-cyan-500">Dart </b> 🎯 to reach new heights!
-            </div>
-            <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
-                <a href="https://discord.gg/zydgnJ3ksJ" class="bg-gradient-to-r from-rose-500 to-rose-600 px-8 py-4 rounded-full flex items-center gap-4"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
-            </div>
-        </div>
+        
   	</div>
 </template>
 
