@@ -1,11 +1,13 @@
 ---
-title: Avesbox - A Dart ecosystem
+title: Avesbox - Dart ecosystem
 titleTemplate: false
-layout: home
+layout: flexhome
 ---
 
 <script setup>
   import Home from './components/home.vue';
+  import Projects from './components/projects.vue';
 </script>
 
 <Home />
+<Projects />

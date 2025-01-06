@@ -12,7 +12,7 @@ export default defineConfig({
   appearance: false,
   themeConfig: {
     footer: {
-      copyright: 'Copyright © 2024 Avesbox',
+      copyright: 'Copyright © 2025 Avesbox',
       message: 'Built with 💙 by <a href="https://github.com/avesbox">Avesbox</a>'
     },
     // https://vitepress.dev/reference/default-theme-config

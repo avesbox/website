@@ -30,6 +30,15 @@ head:
 			alt: 'Unleash the power of Dart on the backend',
 			date: '11 Nov 2024',
 			href: '/blog/unleash_the_power',
+      author: 'Francesco Vallone'
+		},
+    {
+			title: 'Avesbox - Unleash the power of Dart on the backend',
+			src: '/blog/unleash_the_power/unleash_the_power.webp',
+			alt: 'Unleash the power of Dart on the backend',
+			date: '11 Nov 2024',
+			href: '/blog/unleash_the_power',
+      author: 'Francesco Vallone'
 		},
 	]"
 />

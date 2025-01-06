@@ -1,14 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, onUnmounted } from 'vue'
-
-const authors = {
-    "Francesco Vallone": {
-        src: 'francesco_vallone.webp',
-        twitter: 'francescovll'
-    }
-}
-
-type Authors = typeof authors
+import { authors, Authors } from './authors';
 
 const props = defineProps<{
     title: string
