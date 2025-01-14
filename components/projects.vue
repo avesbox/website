@@ -1,25 +1,28 @@
 <script setup>
 
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const projects = [
     {
         name: 'Serinus',
         description: 'The modular server-side framework of your dreams',
         image: '/birds/serinus-logo.png',
-        link: 'https://serinus.app'
+        link: 'https://serinus.app',
+        color: '#ff9800'
     },
     {
         name: 'Acanthis',
         description: 'Your best pal for validating data',
         image: '/birds/acanthis-logo.png',
-        link: 'https://acanthis.serinus.app'
+        link: 'https://acanthis.serinus.app',
+        color: '#c52233'
     },
     {
         name: 'Frontier',
         description: 'Simple Strategy-based Authentication library',
         image: '/birds/frontier-logo.png',
-        link: 'https://github.com/avesbox/frontier'
+        link: 'https://github.com/avesbox/frontier',
+        color: '#f3523d'
     },
     // {
     //     name: 'Loxia',
@@ -28,6 +31,8 @@ const projects = [
     //     link: 'https://github.com/avesbox/loxia'
     // }
 ]
+
+const currentProject = ref(0)
 
 onMounted(() => {
     for (const bird of projects) {
@@ -52,17 +57,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col justify-center w-full relative mb-8">
+    <div class="mx-auto flex flex-col justify-center lg:w-[64rem] relative mb-8">
         <h1 class="text-2xl font-bold">Projects</h1>
-        <p class="text-lg md:w-[48rem] mb-8">We create and maintain projects to streamline your development process</p>
-        <div class="flex flex-col items-center w-full gap-4">
-            <div :id="bird.name" v-for="bird in projects" :key="bird.name" class="bird flex items-center w-full h-32 justify-between bg-transparent">
-                <a :href="bird.link" target="_blank">
-                    <div class="text-4xl font-bold">{{ bird.name }}</div>
-                    <span class="md:flex hidden">{{ bird.description }}</span>
-                </a>
-                <img :src="bird.image" class="w-32 h-32" />
-            </div>
+        <p class="text-lg mb-8">We maintain and develop our projects focusing on the developer experience and their interoperability to offer you the best tooling for Dart</p>
+        <div class="w-full grid grid-cols-2">
+            
         </div>
     </div>
 </template>
@@ -80,6 +79,9 @@ onMounted(() => {
 
 .bird:hover > img {
     transform: scale(1.1);
+}
+.project {
+    cursor: pointer;
 }
 </style>
 

@@ -5,7 +5,7 @@ const frontmatter = useData();
 </script>
 
 <template>
-    <div id="flexhome" class="flex flex-col w-full">
+    <div id="flexhome" class="flex flex-col w-full items-center">
         <VPHomeContent v-if="frontmatter.markdownStyles !== false">
             <Content />
         </VPHomeContent>
@@ -14,4 +14,8 @@ const frontmatter = useData();
 </template>
 
 <style>
+#flexhome > .vp-doc.container {
+    margin: 0;
+    padding: 0;
+}
 </style>
