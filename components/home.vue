@@ -7,7 +7,7 @@
 			<div class="p-1 w-16 h-16 rounded-full bg-rose-500/25 flex items-center justify-center border-2 border-rose-500">
 				<img src="/logo.png">
 			</div>
-            <div class="text-4xl lg:text-6xl text-center font-bold text-pretty md:w-[44rem]">The toolbox for your Dart & Flutter experience</div>
+            <div class="text-4xl lg:text-6xl text-center font-bold text-pretty md:w-[44rem]">Flutter & Dart convenience toolbox</div>
             <div class="my-4 lg:my-8 text-xl text-center md:w-[44rem] text-pretty">
                 Our mission is to provide you with the best tools and resources to develop your applications.
             </div>
