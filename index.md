@@ -1,5 +1,5 @@
 ---
-title: Avesbox - Dart ecosystem
+title: Avesbox - Flutter & Dart ecosystem
 titleTemplate: false
 layout: flexhome
 ---
