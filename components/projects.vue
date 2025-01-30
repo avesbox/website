@@ -61,8 +61,8 @@ const projects = [
         <p class="text-lg mb-8">We maintain and develop our projects focusing on the developer experience and their interoperability to offer you the best tooling for Dart</p>
         <div class="w-full grid lg:grid-cols-2 gap-4">
             <a :href="project.link" v-for="project of projects" :key="project.name" class="w-full p-4 rounded-lg relative transition-all grayscale hover:grayscale-0" :style="{'boxShadow': '0 0 4px ' + project.shadowColor}">
-                <div class="flex justify-between items-center">
-                    <div class="flex flex-col">
+                <div class="flex justify-between items-center gap-2">
+                    <div class="flex flex-col max-w-[70%]">
                         <div class="text-xl text-zinc-900 font-semibold">{{ project.name }}</div>
                         <span class="text-sm text-zinc-600 font-normal text-pretty">{{ project.description }}</span>
                     </div>
