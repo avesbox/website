@@ -17,7 +17,7 @@ const props = defineProps({
 		</header>
 		<main class="lg:grid flex flex-col max-w-7xl mx-auto gap-4 w-full my-4 grid-cols-2">
 			<div v-for="(post, index) in props.posts"
-				class="p-4 rounded-lg transition-all"
+				class="p-4 rounded-lg transition-all shadow-lg"
 				:class="index === 0 ? ['col-span-2', 'row-span-1'] : ['col-span-1', 'row-span-1']"
 				:key="post.date + post.href">
 				<article v-if="index === 0" class="grid grid-cols-2 gap-2 items-center">

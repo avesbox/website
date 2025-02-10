@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { onMounted, onUnmounted } from 'vue'
 import { authors, Authors } from './authors';
+import { Brand, colors } from './colors';
 
 const props = defineProps<{
     title: string
@@ -9,11 +10,31 @@ const props = defineProps<{
     author: keyof Authors
     date: string
     shadow?: boolean
+    brand?: Brand
 }>()
 
 const author = authors[props.author]
 const profile = `/blog/authors/${author.src}`
 const twitter = `https://twitter.com/${author.twitter}`
+
+if(props.brand) {
+    const styleChild = document.createElement('style');
+    const palette = colors[props.brand]
+    styleChild.textContent = `
+        :root {
+            --vp-c-brand-1: ${palette.brand1};
+            --vp-c-brand-1-light: ${palette.brand1Light};
+            --vp-c-brand-1-lighter: ${palette.brand1Lighter};
+            --vp-c-brand-1-lightest: ${palette.brand1Lightest};
+            --vp-c-brand-1-dark: ${palette.brand1Dark};
+            --vp-c-brand-1-darker: ${palette.brand1Darker};
+            --vp-c-brand-dimm: ${palette.brandDimm};
+            --vp-home-hero-name-background: var(--vp-c-brand-1) !important;
+            --vp-c-bg: ${palette.bg};            
+        }
+    `
+    document.querySelector('head')?.appendChild(styleChild)
+}
 
 const mutated = ['.aside', '.content', '.content-container', '.VPDocFooter']
 onMounted(() => {
