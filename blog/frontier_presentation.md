@@ -33,7 +33,7 @@ head:
 	src="/blog/frontier_presentation_page/frontier_presentation_page.webp"
 	alt="Frontier - Streamlining User Authentication in Dart"
 	author="Francesco Vallone"
-	date="10 Feb 2025"
+	date="12 Feb 2025"
 	shadow
 	brand="frontier"
 >
