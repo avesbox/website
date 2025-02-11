@@ -38,11 +38,9 @@ head:
 	brand="frontier"
 >
 
-Have you ever struggled with user authentication in your Dart applications? If so, you're not alone. User authentication is a common challenge for developers, and it can be a time-consuming and error-prone process.
+Have you ever had to deal with Firebase Auth and it's amazing policy about refresh tokens? Or maybe you prefer Auth0 but you don't like the idea of going broke because of the pricing? Or perhaps your boss asked you to validate some cognito tokens and you don't know where to start? Well I had to deal with all of these problems and even more and allow me to say I understand your frustation. But don't worry, I have a solution for you!
 
-Some famous dart backend frameworks provide built-in solutions for user authentication, but what if you don't want to use that specific framework? Do you have to implement everything from scratch?
-
-This is where Frontier comes in. Have I piqued your interest? Keep reading to learn more! 🐤
+Have you ever heard of Frontier? No? Well, let me introduce you to this amazing library!
 
 ## What is Frontier?
 
