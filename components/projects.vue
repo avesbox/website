@@ -15,7 +15,7 @@ const projects = [
         name: 'Acanthis',
         description: 'Your best pal for validating data',
         image: '/birds/acanthis-logo.png',
-        link: 'https://acanthis.serinus.app',
+        link: 'https://acanthis.avesbox.com',
         color: '#c52233',
         shadowColor: 'rgba(197, 34, 51, 0.5)'
     },
@@ -23,7 +23,7 @@ const projects = [
         name: 'Frontier',
         description: 'Simple Strategy-based Authentication library',
         image: '/birds/frontier-logo.png',
-        link: 'https://github.com/avesbox/frontier',
+        link: 'https://frontier.avesbox.com',
         color: '#5E72A7',
         shadowColor: 'rgba(94, 114, 167, 0.5)'
     },
