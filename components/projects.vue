@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 const projects = [
     {
         name: 'Serinus',
-        description: 'The modular server-side framework of your dreams',
+        description: 'The Nest.js for Flutter',
         image: '/birds/serinus-logo.png',
         link: 'https://serinus.app',
         color: '#ff9800',
