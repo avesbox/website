@@ -20,9 +20,7 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
-    search: {
-      provider: 'local'
-    },
+    search: undefined,
     
     // https://vitepress.dev/reference/default-theme-config
     nav: [

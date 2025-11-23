@@ -3,15 +3,12 @@
 
 <template>
 	<div id="hero" class="flex w-full h-[40rem] gap-8 flex items-center justify-center p-8 md:p-0">
-		<div class="flex flex-col items-center">
-			<div class="p-1 w-16 h-16 rounded-full bg-rose-500/25 flex items-center justify-center border-2 border-rose-500">
-				<img src="/logo.png">
-			</div>
-            <div class="text-4xl lg:text-6xl text-center font-bold text-pretty md:w-[44rem]">Flutter & Dart convenience toolbox</div>
-            <div class="my-4 lg:my-8 text-xl text-center md:w-[44rem] text-pretty">
-                Our mission is to provide you with the best tools and resources to develop your applications.
+		<div class="flex flex-col items-center w-full">
+            <div class="text-5xl md:text-6xl lg:text-8xl text-center font-bold w-full md:w-auto md:text-pretty">Architecting the Dart Ecosystem</div>
+            <div class="my-4 lg:my-8 text-xl text-center w-full md:w-auto md:text-pretty text-gray-600">
+                We forge the foundational tools you need to ship better apps, faster
             </div>
-            <a href="https://discord.gg/zydgnJ3ksJ" class="max-w-fit bg-gradient-to-r from-rose-500 to-rose-600 px-8 py-4 rounded-full flex items-center gap-4"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
+            <a href="https://discord.gg/zydgnJ3ksJ" class="bg-rose-500 hover:shadow-md transition-shadow px-8 py-4 rounded-md text-white text-center lg:text-start w-full gap-4 items-center flex lg:w-auto font-semibold"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
         </div>
   	</div>
 </template>
