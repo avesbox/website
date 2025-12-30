@@ -70,6 +70,59 @@
 	--sidebar-border: 48 15% 82%;
 	--sidebar-ring: 2 76% 62%;
   }
+  
+.dark {
+	--vp-custom-block-tip-border: var(--vp-c-brand);
+	--vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+	--vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+	--vp-c-bg: hsl(60 9% 6%);
+	--vp-c-brand-1: hsl(52 100% 50%);
+	--vp-code-block-bg: #1f1f1f;
+	--background: 60 9% 6%;
+    --foreground: 60 9% 96%;
+
+    --card: 60 5% 9%;
+    --card-foreground: 60 9% 96%;
+
+    --popover: 60 5% 9%;
+    --popover-foreground: 60 9% 96%;
+
+    --primary: 52 100% 50%;
+    --primary-foreground: 60 9% 6%;
+
+    --secondary: 60 3% 15%;
+    --secondary-foreground: 60 9% 96%;
+
+    --muted: 60 3% 12%;
+    --muted-foreground: 60 5% 50%;
+
+    --accent: 52 100% 50%;
+    --accent-foreground: 60 9% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 9% 96%;
+
+    --border: 60 5% 18%;
+    --input: 60 5% 18%;
+    --ring: 52 100% 50%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --serinus-yellow: 52 100% 50%;
+    --serinus-cream: 48 30% 90%;
+    --serinus-warm: 60 9% 6%;
+    --serinus-olive: 80 15% 25%;
+    
+    --sidebar-background: 60 9% 6%;
+    --sidebar-foreground: 60 9% 96%;
+    --sidebar-primary: 52 100% 50%;
+    --sidebar-primary-foreground: 60 9% 6%;
+    --sidebar-accent: 60 3% 15%;
+    --sidebar-accent-foreground: 60 9% 96%;
+    --sidebar-border: 60 5% 18%;
+    --sidebar-ring: 52 100% 50%;
+}
   * {
     @apply border-border;
   }
@@ -330,4 +383,31 @@
 
 html {
 	scroll-behavior: smooth;
+}
+
+.VPNavBar:not(.home.top) .divider-line, .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
+	background-color: transparent !important;
+}
+.VPNavBarTitle.has-sidebar .title {
+	border-bottom: 1px solid transparent !important;
+}
+@media (min-width: 960px) {
+	.VPNavBar:not(.has-sidebar) > .wrapper {
+		padding: 0 16rem !important;
+	}
+}
+.VPNavBar:not(.has-sidebar) > .wrapper > .container {
+	margin: unset !important;
+	max-width: 100% !important;
+}
+
+.VPNavBar:not(.has-sidebar):not(.home) {
+	@apply backdrop-blur-md bg-neutral-900/80!;
+}
+.VPNavBar:not(.has-sidebar).top {
+	background-color: transparent !important;
+	@apply backdrop-blur-md bg-neutral-900/80!;
+}
+.VPNavBar:not(.has-sidebar) > .wrapper {
+	@apply 2xl:px-64 lg:px-16 px-8;
 }
