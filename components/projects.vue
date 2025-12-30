@@ -10,18 +10,21 @@
       title: 'Serinus',
       description: 'Backend for Dart. Opinionated to just the right degree.',
       icon: defineComponent(() => () => h('img', { src: '/birds/serinus-logo.png', class: 'w-10 h-10', alt: 'Serinus Logo' })),
+      link: 'https://serinus.app',
     },
     {
       number: '02',
       title: 'Acanthis',
       description: 'Your best pal for validating data in Flutter & Dart applications.',
       icon: defineComponent(() => () => h('img', { src: '/birds/acanthis-logo.png', class: 'w-10 h-10', alt: 'Acanthis Logo' })),
+      link: 'https://acanthis.avesbox.com'
     },
     {
       number: '03',
       title: 'Frontier',
       description: 'Simple authentication for Dart & Flutter applications.',
       icon: defineComponent(() => () => h('img', { src: '/birds/frontier-logo.png', class: 'w-10 h-10', alt: 'Frontier Logo' })),
+      link: 'https://frontier.avesbox.com'
     },
     {
       number: '04',
@@ -35,12 +38,14 @@
       title: 'Secure Session',
       description: 'Secure, encrypted, and tamper-proof sessions for Dart & Flutter applications.',
       icon: defineComponent(() => () => h('img', { src: '/logo.png', class: 'w-10 h-10', alt: 'Secure Session Logo' })),
+      link: 'https://pub.dev/packages/secure_session'
     },
     {
       number: '06',
       title: 'Microdiff',
       description: 'Lightweight data diffing & patching library for Dart.',
       icon: defineComponent(() => () => h('img', { src: '/logo.png', class: 'w-10 h-10', alt: 'Microdiff Logo' })),
+      link: 'https://pub.dev/packages/microdiff'
     },
   ];
 </script>
@@ -86,8 +91,9 @@
 
         <!-- Features Grid - Offset layout -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-        	<motion.div
+        	<motion.a
         	  :key="feature.title"
+              :href="feature.link"
         	  :variants="scrollVariants.scaleIn"
         	  initial="hidden"
         	  whileInView="visible"
@@ -118,7 +124,7 @@
         	  <p class="text-sm text-muted-foreground leading-relaxed">
         	    {{feature.description}}
         	  </p>
-        	</motion.div>
+        	</motion.a>
         </div>
         <a
             href="https://github.com/avesbox"
