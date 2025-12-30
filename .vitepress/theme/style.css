@@ -402,9 +402,16 @@ html {
 }
 
 .VPNavBar:not(.has-sidebar):not(.home) {
-	@apply backdrop-blur-md bg-neutral-900/80!;
+	@apply backdrop-blur-md bg-neutral-100/80!;
 }
 .VPNavBar:not(.has-sidebar).top {
+	background-color: transparent !important;
+	@apply backdrop-blur-md bg-neutral-100/80!;
+}
+.dark .VPNavBar:not(.has-sidebar):not(.home) {
+	@apply backdrop-blur-md bg-neutral-900/80!;
+}
+.dark .VPNavBar:not(.has-sidebar).top {
 	background-color: transparent !important;
 	@apply backdrop-blur-md bg-neutral-900/80!;
 }
