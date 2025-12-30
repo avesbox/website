@@ -1,33 +1,93 @@
-<script setup>
+<script setup lang="ts">
+import { motion } from 'motion-v';
+import { scrollVariants } from './actions/scroll_variants';
+
 </script>
 
 <template>
-	<div id="hero" class="flex w-full h-[40rem] gap-8 flex items-center justify-center p-8 md:p-0">
-		<div class="flex flex-col items-center w-full">
-            <div class="text-5xl md:text-6xl lg:text-8xl text-center font-bold w-full md:w-auto md:text-pretty">Architecting the Dart Ecosystem</div>
-            <div class="my-4 lg:my-8 text-xl text-center w-full md:w-auto md:text-pretty text-gray-600">
-                We forge the foundational tools you need to ship better apps, faster
+    <section class="py-32 relative overflow-hidden grain">
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <motion.div
+            :variants="scrollVariants.slideLeft"
+            initial="hidden"
+            whileInView="visible"
+            :viewport="{ once: true, amount: 0.3 }"
+            :transition="{ duration: 0.7 }"
+            class="lg:col-span-6"
+          >
+            <div class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+              We build exceptionals
+              <span class="text-primary">Dart & Flutter</span>
+              tools
             </div>
-            <a href="https://discord.gg/zydgnJ3ksJ" class="bg-rose-500 hover:shadow-md transition-shadow px-8 py-4 rounded-md text-white text-center lg:text-start w-full gap-4 items-center flex lg:w-auto font-semibold"><span class="vpi-social-discord" style="--icon: url('https://api.iconify.design/simple-icons/discord.svg');"></span> Join the community</a>
+            <p class="text-lg text-muted-foreground max-w-md mb-10! leading-relaxed">
+              Avesbox is the home of open-source projects and tools for Dart & Flutter developers.
+              Our mission is to empower developers with high-quality, easy-to-use solutions.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://discord.gg/zydgnJ3ksJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center gap-3 px-6 py-4 bg-[#5865F2] text-white! font-display font-semibold hover:gap-5 transition-all"
+              >
+                Join Discord
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg>
+              </a>
+              <a
+                href="https://github.com/avesbox"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="star inline-flex items-center gap-3 px-6 py-4 editorial-border text-foreground font-display font-semibold hover:bg-foreground hover:text-background! transition-all"
+              >
+                Follow on GitHub
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            :variants="scrollVariants.scaleIn"
+            initial="hidden"
+            whileInView="visible"
+            :viewport="{ once: true, amount: 0.3 }"
+            :transition="{ delay: 0.2, duration: 0.7 }"
+            class="lg:col-span-6 relative"
+          >
+            <div class="relative w-full aspect-square max-w-md mx-auto">
+              <motion.div
+                class="absolute inset-0 border-2 border-dashed border-primary/30"
+                :animate="{ rotate: 360 }"
+                :transition="{ duration: 30, repeat: Infinity, ease: 'linear' }"
+              />
+              
+              <div class="absolute inset-8 border-2 border-border bg-card/50 flex items-center justify-center">
+                <motion.img
+                  src="/logo.png"
+                  alt="Avesbox"
+                  class="w-32 h-32"
+                  :animate="{ y: [0, -10, 0] }"
+                  :transition="{ duration: 3, repeat: Infinity, ease: 'easeInOut' }"
+                />
+              </div>
+              
+              <div class="absolute -top-3 -left-3 bg-primary text-primary-foreground px-3 py-1 font-mono text-xs uppercase">
+                Open Source
+              </div>
+              <div class="absolute -bottom-3 -right-3 bg-foreground text-background px-3 py-1 font-mono text-xs uppercase">
+                MIT License
+              </div>
+            </div>
+          </motion.div>
         </div>
-  	</div>
+      </div>
+    </section>
 </template>
 
 <style scoped>
-.vp-doc a {
-	color: white;
-	text-decoration: none;
-}
-
-.vp-doc a.text-black {
-	color: rgb(27, 27, 31);
-}
-
-p {
-	margin: 0 !important;
-}
-
-ol {
-	padding: 0;
+a.star:hover {
+	color: hsl(var(--background)) !important;
 }
 </style>

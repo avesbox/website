@@ -1,10 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-import FlexHome from '../../components/flexhome.vue'
+import Layout from './layout.vue'
 
 export default {
     extends: DefaultTheme,
-    enhanceApp({ app }) {
-        app.component('flexhome', FlexHome)
-    }
+    Layout
 }

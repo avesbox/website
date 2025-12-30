@@ -1,7 +1,8 @@
 ---
 title: Avesbox - Flutter & Dart ecosystem
 titleTemplate: false
-layout: flexhome
+layout: page
+sidebar: false
 ---
 
 <script setup>

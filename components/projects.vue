@@ -1,135 +1,139 @@
-<script setup>
+<script setup lang="ts">
+  import { motion } from 'motion-v';
+  import { scrollVariants } from './actions/scroll_variants';
+  import { defineComponent, h } from 'vue';
+  import { CodeFile, LightningIcon, PuzzleIcon, RadioIcon, SettingsIcon, ShieldIcon, TerminalIcon } from './icons';
 
-import { onMounted, ref } from 'vue';
-
-const projects = [
+  const features: any[] = [
     {
-        name: 'Serinus',
-        description: 'The Nest.js for Flutter',
-        image: '/birds/serinus-logo.png',
-        link: 'https://serinus.app',
-        color: '#ff9800',
-        shadowColor: 'rgba(255, 152, 0, 0.5)'
+      number: '01',
+      title: 'Serinus',
+      description: 'Backend for Dart. Opinionated to just the right degree.',
+      icon: defineComponent(() => () => h('img', { src: '/birds/serinus-logo.png', class: 'w-10 h-10', alt: 'Serinus Logo' })),
     },
     {
-        name: 'Acanthis',
-        description: 'Your best pal for validating data',
-        image: '/birds/acanthis-logo.png',
-        link: 'https://acanthis.avesbox.com',
-        color: '#c52233',
-        shadowColor: 'rgba(197, 34, 51, 0.5)'
+      number: '02',
+      title: 'Acanthis',
+      description: 'Your best pal for validating data in Flutter & Dart applications.',
+      icon: defineComponent(() => () => h('img', { src: '/birds/acanthis-logo.png', class: 'w-10 h-10', alt: 'Acanthis Logo' })),
     },
     {
-        name: 'Frontier',
-        description: 'Simple Strategy-based Authentication library',
-        image: '/birds/frontier-logo.png',
-        link: 'https://frontier.avesbox.com',
-        color: '#5E72A7',
-        shadowColor: 'rgba(94, 114, 167, 0.5)'
+      number: '03',
+      title: 'Frontier',
+      description: 'Simple authentication for Dart & Flutter applications.',
+      icon: defineComponent(() => () => h('img', { src: '/birds/frontier-logo.png', class: 'w-10 h-10', alt: 'Frontier Logo' })),
     },
     {
-        name: 'Secure Session',
-        description: 'Secure stateless cookie session',
-        image: '/logo.png',
-        link: 'https://github.com/avesbox/secure_session',
-        color: '#f3523d',
-        shadowColor: 'rgba(243, 82, 61, 0.5)'
+      number: '04',
+      title: 'Loxia',
+      description: 'An ORM that speaks Dart with type-safety and elegance.',
+      wip: true,
+      icon: defineComponent(() => () => h('img', { src: '/birds/loxia-logo.png', class: 'w-10 h-10', alt: 'Loxia Logo' })),
     },
     {
-        name: 'Microdiff',
-        description: 'A zero dependency object and array comparison library',
-        image: '/logo.png',
-        link: 'https://github.com/avesbox/microdiff',
-        color: '#f3523d',
-        shadowColor: 'rgba(243, 82, 61, 0.5)'
+      number: '05',
+      title: 'Secure Session',
+      description: 'Secure, encrypted, and tamper-proof sessions for Dart & Flutter applications.',
+      icon: defineComponent(() => () => h('img', { src: '/logo.png', class: 'w-10 h-10', alt: 'Secure Session Logo' })),
     },
     {
-        name: 'Dart Socket.io',
-        description: 'Port of JS/Node library Socket.io',
-        image: '/logo.png',
-        link: 'https://github.com/avesbox/dart_socket_io',
-        color: '#f3523d',
-        shadowColor: 'rgba(243, 82, 61, 0.5)'
-    }
-]
-
+      number: '06',
+      title: 'Microdiff',
+      description: 'Lightweight data diffing & patching library for Dart.',
+      icon: defineComponent(() => () => h('img', { src: '/logo.png', class: 'w-10 h-10', alt: 'Microdiff Logo' })),
+    },
+  ];
 </script>
 
 <template>
-    <div class="mx-auto flex flex-col justify-center lg:w-[64rem] mb-8 p-4">
-        <h1 class="text-2xl font-bold">Projects</h1>
-        <p class="text-lg mb-8">We maintain and develop our projects focusing on the developer experience and their interoperability to offer you the best tooling for Dart</p>
-        <div class="w-full grid lg:grid-cols-2 gap-4">
-            <a :href="project.link" v-for="project of projects" :key="project.name" class="w-full p-4 rounded-lg relative transition-all grayscale hover:grayscale-0" :style="{'boxShadow': '0 0 4px ' + project.shadowColor}">
-                <div class="flex justify-between items-center gap-2">
-                    <div class="flex flex-col max-w-[70%]">
-                        <div class="text-xl text-zinc-900 font-semibold">{{ project.name }}</div>
-                        <span class="text-sm text-zinc-600 font-normal text-pretty">{{ project.description }}</span>
-                    </div>
-                    <div class="p-1 w-16 h-16 rounded-full flex items-center justify-center border-2" :style="{backgroundColor: project.shadowColor, borderColor: project.color}">
-                        <img :src="project.image">
-                    </div>
-                </div>
-            </a>
+	<section class="py-32 relative grain">
+      <div class="absolute top-20 left-10 text-[150px] font-display font-bold text-stroke opacity-5 select-none hidden lg:block">
+        02
+      </div>
+
+      <div class="container mx-auto px-6 flex flex-col gap-16">
+        <div class="grid lg:grid-cols-12 gap-8 mb-20">
+          <motion.div
+            :variants="scrollVariants.slideLeft"
+            initial="hidden"
+            whileInView="visible"
+            :viewport="{ once: true, amount: 0.3 }"
+            :transition="{ duration: 0.6 }"
+            class="lg:col-span-4"
+          >
+            <span class="tag text-muted-foreground mb-4 block w-fit">Projects</span>
+            <div class="text-4xl md:text-5xl font-display font-bold leading-tight">
+              Interoperability
+              <br />
+              <span class="font-serif italic font-normal text-muted-foreground">by design</span>
+            </div>
+          </motion.div>
+          
+          <motion.div
+            :variants="scrollVariants.slideRight"
+            initial="hidden"
+            whileInView="visible"
+            :viewport="{ once: true, amount: 0.3 }"
+            :transition="{ duration: 0.6, delay: 0.2 }"
+            class="lg:col-span-5 lg:col-start-7 flex items-end"
+          >
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Designed to make building with Dart and Flutter straightforward.
+              Avoid unnecessary complexity. Focus on your applications.
+            </p>
+          </motion.div>
         </div>
-    </div>
+
+        <!-- Features Grid - Offset layout -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        	<motion.div
+        	  :key="feature.title"
+        	  :variants="scrollVariants.scaleIn"
+        	  initial="hidden"
+        	  whileInView="visible"
+        	  :viewport="{ once: true, amount: 0.2 }"
+        	  :transition="{ duration: 0.5, delay: index * 0.1 }"
+        	  class="group bg-background p-8 hover:bg-card transition-colors relative"
+			  v-for="(feature, index) in features"
+        	>
+            <!-- Number -->
+        	  <span class="absolute top-4 right-4 font-mono text-xs text-muted-foreground/50">
+        	    {{feature.number}}
+        	  </span>
+
+              <span v-if="feature.wip" class="tag absolute top-3 right-10 font-mono text-xs text-muted-foreground/50 text-primary border-primary/30 group-hover:border-primary group-hover:bg-primary/10 transition-all">
+        	    WIP
+        	  </span>
+		  
+        	  <motion.div 
+        	    class="w-12 h-12 border-2 border-primary/30 flex items-center justify-center mb-6 group-hover:border-primary group-hover:bg-primary/10 transition-all"
+        	    :whileHover="{ rotate: 5, scale: 1.05 }"
+        	  >
+         	    <component :is="feature.icon" class="w-5 h-5 text-primary" />
+        	  </motion.div>
+		  
+        	  <div class="text-xl font-display font-semibold text-foreground mb-3">
+        	    {{feature.title}}	
+        	  </div>
+        	  <p class="text-sm text-muted-foreground leading-relaxed">
+        	    {{feature.description}}
+        	  </p>
+        	</motion.div>
+        </div>
+        <a
+            href="https://github.com/avesbox"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="star inline-flex items-center gap-3 px-6 py-4 max-w-fit m-auto editorial-border text-foreground font-display font-semibold hover:bg-foreground hover:text-background! transition-all"
+        >
+            Explore all projects on GitHub
+        </a>
+      </div>
+    </section>
 </template>
 
 <style scoped>
-
-.vp-doc p, .vp-doc summary{
-    margin: 0;
-    margin-bottom: 2rem;
-}
-.vp-doc a {
-    color: initial;
-    text-decoration: none;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-}
-
-.bird:hover > img {
-    transform: scale(1.1);
-}
-.project {
-    cursor: pointer;
-}
-</style>
-
-<style>
-
-.feather {
-	animation: falling 3s linear, side 3s ease-in-out;
-	transition: all 0.5s;
-	transform-origin: 8px;
-}
-
-
-
-@keyframes side {
-	0% {
-		translate: 0px;
-	}
-
-	50% {
-		translate: -160px;
-	}
-
-	100% {
-		translate: 0px;
-	}
-}
-
-@keyframes falling {
-	0% {
-		top: 0;
-		rotate: z 0deg;
-	}
-
-	100% {
-		top: 60vh;
-		rotate: z 360deg;
-	}
+a.star:hover {
+	color: hsl(var(--background)) !important;
 }
 </style>
