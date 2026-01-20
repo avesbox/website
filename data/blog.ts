@@ -4,14 +4,14 @@ export const posts = [
         src: '/blog/canary_presentation/canary_presentation.webp',
         alt: 'Canary: Dart has code hovers now!',
         date: '20 Jan 2026',
-        href: '/blog/canary_presentation',
+        href: '/blog/canary_presentation.html',
     },
     {
 		title: 'Frontier - Streamlining User Authentication in Dart',
 		src: '/blog/frontier_presentation_page/frontier_presentation_page.webp',
 		alt: 'Frontier: Streamlining User Authentication in Dart',
 		date: '12 Feb 2025',
-		href: '/blog/frontier_presentation',
+		href: '/blog/frontier_presentation.html',
 		author: 'Francesco Vallone'
     },
 	{
@@ -19,7 +19,7 @@ export const posts = [
 		src: '/blog/unleash_the_power/unleash_the_power.webp',
 		alt: 'Unleash the power of Dart on the backend',
 		date: '11 Nov 2024',
-		href: '/blog/unleash_the_power',
+		href: '/blog/unleash_the_power.html',
       	author: 'Francesco Vallone'
     },
 ]
