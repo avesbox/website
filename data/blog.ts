@@ -1,5 +1,12 @@
 export const posts = [
     {
+        title: 'Canary - Dart has code hovers now!',
+        src: '/blog/canary_presentation/canary_presentation.webp',
+        alt: 'Canary: Dart has code hovers now!',
+        date: '20 Jan 2026',
+        href: '/blog/canary_presentation',
+    },
+    {
 		title: 'Frontier - Streamlining User Authentication in Dart',
 		src: '/blog/frontier_presentation_page/frontier_presentation_page.webp',
 		alt: 'Frontier: Streamlining User Authentication in Dart',
