@@ -1,5 +1,13 @@
 export const posts = [
     {
+        title: 'Loxia - Your Database, fluent in Dart',
+        src: '/blog/loxia_presentation/loxia_presentation.png',
+        alt: 'Loxia - Your Database, fluent in Dart',
+        date: '08 Feb 2026',
+        href: '/blog/loxia_presentation.html',
+        author: 'Francesco Vallone'
+    },
+    {
         title: 'Canary - Dart has code hovers now!',
         src: '/blog/canary_presentation/canary_presentation.webp',
         alt: 'Canary: Dart has code hovers now!',

@@ -45,8 +45,9 @@ export default defineLoader({
 				number: '04',
 				title: 'Loxia',
 				description: 'An ORM that speaks Dart with type-safety and elegance.',
-				wip: true,
 				icon: 'loxia',
+				link: 'https://loxia.avesbox.com',
+				fetchLink: 'https://pub.dev/api/packages/loxia'
 			},
 			{
 				number: '05',
@@ -60,7 +61,8 @@ export default defineLoader({
 				title: 'Secure Session',
 				description: 'Secure, encrypted, and tamper-proof sessions for Dart & Flutter applications.',
 				icon: 'secure_session',
-				link: 'https://pub.dev/packages/secure_session'
+				link: 'https://pub.dev/packages/secure_session',
+				fetchLink: 'https://pub.dev/api/packages/secure_session'
 			},
 		];
 		for (const project of projects) {
@@ -78,7 +80,6 @@ export default defineLoader({
 				}
 			}
 		}
-		console.log('Loaded projects data:', projects);
 		return [
 			...projects
 		];
