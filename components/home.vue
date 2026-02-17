@@ -49,7 +49,7 @@ import { type Sponsor, data } from './sponsors.data';
             </div>
             <div class="border-t border-border pt-8 mt-8">
               <p class="text-sm text-muted-foreground mb-4!">
-                Serinus is free and open source. Help us keep it that way.
+                Avesbox is open source. Help us keep it that way.
               </p>
               
               <div class="flex items-center gap-3 mb-6">
