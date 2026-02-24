@@ -95,7 +95,7 @@ const categoryColors: Record<string, string> = {
                       {{featuredPost.title}}
                     </div>
 
-					<p className="text-muted-foreground">
+					<p class="text-muted-foreground">
                         {{featuredPost.desc}}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ const categoryColors: Record<string, string> = {
                       {{post.title}}
                     </div>
 
-					<p className="text-sm text-muted-foreground! mb-4! line-clamp-2">
+					<p class="text-sm text-muted-foreground! mb-4! line-clamp-2">
                         {{post.desc}}
                     </p>
                     
