@@ -29,7 +29,7 @@
             :variants="scrollVariants.slideLeft"
             initial="hidden"
             whileInView="visible"
-            :viewport="{ once: true, amount: 0.3 }"
+            :inViewOptions="{ once: true, amount: 0.3 }"
             :transition="{ duration: 0.6 }"
             class="lg:col-span-4"
           >
@@ -45,7 +45,7 @@
             :variants="scrollVariants.slideRight"
             initial="hidden"
             whileInView="visible"
-            :viewport="{ once: true, amount: 0.3 }"
+            :inViewOptions="{ once: true, amount: 0.3 }"
             :transition="{ duration: 0.6, delay: 0.2 }"
             class="lg:col-span-5 lg:col-start-7 flex items-end"
           >
@@ -62,7 +62,7 @@
         	  :key="feature.title"
             :href="feature.link"
         	  :variants="scrollVariants.scaleIn"
-        	  :viewport="{ once: true, amount: 0.2 }"
+        	  :inViewOptions="{ once: true, amount: 0.2 }"
         	  :transition="{ duration: 0.5, delay: index * 0.1 }"
         	  initial="hidden"
         	  whileInView="visible"

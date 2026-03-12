@@ -14,7 +14,7 @@ import { type Sponsor, data } from './sponsors.data';
             :variants="scrollVariants.slideLeft"
             initial="hidden"
             whileInView="visible"
-            :viewport="{ once: true, amount: 0.3 }"
+            :inViewOptions="{ once: true, amount: 0.3 }"
             :transition="{ duration: 0.7 }"
             class="lg:col-span-6"
           >
@@ -100,7 +100,7 @@ import { type Sponsor, data } from './sponsors.data';
             :variants="scrollVariants.scaleIn"
             initial="hidden"
             whileInView="visible"
-            :viewport="{ once: true, amount: 0.3 }"
+            :inViewOptions="{ once: true, amount: 0.3 }"
             :transition="{ delay: 0.2, duration: 0.7 }"
             class="lg:col-span-6 relative"
           >

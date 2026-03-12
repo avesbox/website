@@ -5,8 +5,7 @@ export default defineConfig({
   title: "Avesbox",
   description: "The Flutter & Dart ecosystem",
   head: [
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/logo-32x32.png"}],
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/logo-16x16.png"}],
+    ['link', { rel: 'icon', href: '/logo.ico' }],
     ['meta', { property: 'og:title', content: 'The Flutter & Dart ecosystem'}],
     ['meta', { name: 'description', content: 'The Flutter & Dart ecosystem'}],
     ['meta', { property: 'og:description', content: 'The Flutter & Dart ecosystem'}],
